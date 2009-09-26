@@ -1,5 +1,5 @@
 class FitterHappierController < ActionController::Base
-  session :off
+  session :off unless Rails::VERSION::STRING >= '2.3.0'
   layout nil
   
   def index
